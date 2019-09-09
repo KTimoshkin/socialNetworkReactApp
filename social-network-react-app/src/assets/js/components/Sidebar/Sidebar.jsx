@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Styles from './Sidebar.module.sass'
 
 export default class Sidebar extends Component{
     render() {
@@ -7,9 +8,9 @@ export default class Sidebar extends Component{
                 <ul>
                     <li><a href="">Profile</a></li>
                     <li><a href="">Messages</a></li>
-                    <li><a href=""></a>News</li>
-                    <li><a href=""></a>Music</li>
-                    <li><a href=""></a>Settings</li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Music</a></li>
+                    <li><a href="">Settings</a></li>
                 </ul>
             </nav>
         );

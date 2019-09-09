@@ -1,4 +1,9 @@
 @import "./modules/_default"
-@import "./modules/header"
-@import "./modules/_sidebar"
-@import "./modules/_content"
+
+.appWrapper
+  max-width: 1140px
+  margin: 100px auto 40px
+  display: grid
+  grid-template-areas: "n c"
+  grid-template-columns: 2fr 10fr
+  grid-gap: 10px
