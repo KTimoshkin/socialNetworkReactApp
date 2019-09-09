@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic,cyrillic-ext')
+
+body
+  background-color: #FAFAFA
+  width: 100%
+  height: auto
+  z-index: 0
+  margin: 0
+  padding: 0
+  font-family: 'Roboto', sans-serif
+
+*
+  background-repeat: no-repeat
+  background-size: cover
+
+img
+  max-width: 100%
+
+ul
+  margin: 0
+  padding: 0
+
+li
+  list-style-type: none
+
+button, input, select, textarea
+  outline: none !important
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+.appWrapper
+  max-width: 1140px
+  margin: 0 auto
+  display: grid
+  grid-template-areas: "h h" "n c"
+  grid-template-rows: 60px 1fr
+  grid-template-columns: 2fr 10fr
+  grid-gap: 10px
