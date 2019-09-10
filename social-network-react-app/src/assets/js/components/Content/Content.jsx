@@ -9,7 +9,7 @@ export default class Content extends Component{
         return(
             <div className={Styles.content}>
                 <Route path="/" component={Profile} exact></Route>
-                <Route path="/messages" component={Messages} exact></Route>
+                <Route path="/messages" component={Messages} ></Route>
             </div>
         );
     }

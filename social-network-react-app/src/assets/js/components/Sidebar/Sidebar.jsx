@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import Styles from './Sidebar.module.sass'
 
 export default class Sidebar extends Component{
@@ -7,11 +7,11 @@ export default class Sidebar extends Component{
         return(
             <nav className={Styles.sidebar}>
                 <ul>
-                    <li><Link to="/">Profile</Link></li>
-                    <li><Link to="/messages">Messages</Link></li>
-                    <li><Link to="/news">News</Link></li>
-                    <li><Link to="/music">Music</Link></li>
-                    <li><Link to="/settings">Settings</Link></li>
+                    <li><NavLink to="/">Profile</NavLink></li>
+                    <li><NavLink to="/messages">Messages</NavLink></li>
+                    <li><NavLink to="/news">News</NavLink></li>
+                    <li><NavLink to="/music">Music</NavLink></li>
+                    <li><NavLink to="/settings">Settings</NavLink></li>
                 </ul>
             </nav>
         );
