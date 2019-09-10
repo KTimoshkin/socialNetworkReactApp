@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import Styles from './Sidebar.module.sass'
 
 export default class Sidebar extends Component{
     render() {
         return(
-            <nav>
+            <nav className={Styles.sidebar}>
                 <ul>
-                    <li><a href="">Profile</a></li>
-                    <li><a href="">Messages</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Music</a></li>
-                    <li><a href="">Settings</a></li>
+                    <li><Link to="/">Profile</Link></li>
+                    <li><Link to="/messages">Messages</Link></li>
+                    <li><Link to="/news">News</Link></li>
+                    <li><Link to="/music">Music</Link></li>
+                    <li><Link to="/settings">Settings</Link></li>
                 </ul>
             </nav>
         );

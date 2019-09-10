@@ -10,8 +10,8 @@ export default class Posts extends Component{
                     <textarea name="addPostText" ></textarea>
                     <button>Add post</button>
                 </div>
-                <Post postText="Its second post"></Post>
-                <Post postText="Its first post"></Post>
+                <Post postText="It's second post"></Post>
+                <Post postText="It's first post"></Post>
             </div>
         );
     }
