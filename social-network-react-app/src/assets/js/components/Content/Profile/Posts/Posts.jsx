@@ -3,25 +3,45 @@ import Styles from './Posts.module.sass';
 import Post from './Post/Post'
 
 export default class Posts extends Component{
+    postsElements = this.props.postsData.map((element) => {
+        return(
+            <Post postText={element.postText}></Post>
+        );
+    });
+
+    newPostsElement = React.createRef();
+
+    onHotKeyDown = (e) => {
+        if(e.key === 'Enter') {
+            this.addPost();
+        }
+    };
+
+    onInputText = () => {
+        let newPostText = this.newPostsElement.current.value;
+        this.props.updateInputText(newPostText);
+    };
+
+    addPost = () => {
+        let newPostText = this.newPostsElement.current.value;
+        if (newPostText){
+            this.props.addPost(newPostText);
+        }
+    };
+
     render() {
-        let postsData = [
-            {id: 1, postText: "It's second post"},
-            {id: 2, postText: "It's first post"}
-        ];
-
-        let postsElements = postsData.map((element) => {
-            return(
-                <Post postText={element.postText}></Post>
-            );
-        });
-
         return(
             <div className={Styles.posts}>
                 <div className={Styles.addPosts}>
-                    <textarea name="addPostText" ></textarea>
-                    <button>Add post</button>
+                    <textarea onChange={this.onInputText}
+                              ref={this.newPostsElement}
+                              onKeyDown={this.onHotKeyDown}
+                              value={this.props.inputPostText}
+                              placeholder="Добавить новый пост (Enter)">
+                    </textarea>
+                    <button onClick={this.addPost}>Add post</button>
                 </div>
-                {postsElements}
+                {this.postsElements}
             </div>
         );
     }

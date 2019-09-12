@@ -1,20 +1,23 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import '../sass/App.sass'
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Content from './components/Content/Content';
+import {updateInputText} from "./services/state";
 
-function App() {
+function App(props) {
   return (
-    <div className="app">
-      <Header></Header>
-        <div className="appWrapper">
-            <Router>
+      <div className="app">
+          <Header></Header>
+            <div className="appWrapper">
                 <Sidebar></Sidebar>
-                <Content></Content>
-            </Router>
-        </div>
-    </div>
+                <Content
+                    state={props.state}
+                    addPost={props.addPost}
+                    updateInputText={updateInputText}
+                ></Content>
+            </div>
+      </div>
   );
 }
 
