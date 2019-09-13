@@ -3,7 +3,6 @@ import {Route} from 'react-router-dom';
 import Styles from './Content.module.sass'
 import Profile from './Profile/Profile'
 import Messages from './Messages/Messages'
-import {updateInputText} from "../../services/state";
 
 export default class Content extends Component{
     render() {
@@ -15,16 +14,16 @@ export default class Content extends Component{
                         () =>
                             <Profile
                                 profilePage={this.props.state.ProfilePage}
-                                addPost={this.props.addPost}>
-                                updateInputText={updateInputText}
-                            </Profile>
+                                dispatch={this.props.dispatch}
+                            ></Profile>
                     } exact></Route>
                 <Route
                     path="/messages"
                     render={
                         () =>
                             <Messages
-                                state={this.props.state.MessagesPage}
+                                messagePage={this.props.state.MessagesPage}
+                                dispatch={this.props.dispatch}
                             ></Messages>
                     }>
                 </Route>

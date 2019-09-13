@@ -3,7 +3,6 @@ import '../sass/App.sass'
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Content from './components/Content/Content';
-import {updateInputText} from "./services/state";
 
 function App(props) {
   return (
@@ -13,8 +12,7 @@ function App(props) {
                 <Sidebar></Sidebar>
                 <Content
                     state={props.state}
-                    addPost={props.addPost}
-                    updateInputText={updateInputText}
+                    dispatch={props.dispatch}
                 ></Content>
             </div>
       </div>

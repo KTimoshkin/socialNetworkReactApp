@@ -7,8 +7,8 @@ export default class Messages extends Component{
     render() {
         return(
             <div className={Styles.messages}>
-                <Members membersData={this.props.state.membersData}></Members>
-                <Dialogues dialoguesData={this.props.state.dialoguesData}></Dialogues>
+                <Members membersData={this.props.messagePage.membersData}></Members>
+                <Dialogues dialoguesData={this.props.messagePage.dialoguesData} dispatch={this.props.dispatch}></Dialogues>
             </div>
 
         );
