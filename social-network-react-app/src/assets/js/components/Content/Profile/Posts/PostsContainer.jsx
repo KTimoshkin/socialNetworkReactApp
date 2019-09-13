@@ -1,24 +1,34 @@
 import React, {Component} from 'react';
 import Posts from './Posts'
 import {addPostActionCreator, onInputPostTextActionCreator} from "../../../../services/profileReducer";
+import StoreContext from "../../../../services/storeContext";
 
 export default class PostsContainer extends Component{
-    inputPostText = (newPostText) => {
-        this.props.store.dispatch(onInputPostTextActionCreator(newPostText))
-    };
-
-    addPost = () => {
-        this.props.store.dispatch(addPostActionCreator());
-    };
-
     render() {
         return(
-            <Posts
-                postsData={this.props.store.getState().ProfilePage.postsData}
-                inputText={this.props.inputPostText}
-                inputPostText={this.inputPostText}
-                addPost={this.addPost}
-            ></Posts>
+            <StoreContext.Consumer>
+                {(store) => {
+                    let state = store.getState();
+
+                    let inputPostText = (newPostText) => {
+                        store.dispatch(onInputPostTextActionCreator(newPostText))
+                    };
+
+                    let addPost = () => {
+                        store.dispatch(addPostActionCreator());
+                    };
+
+                    return (
+                        <Posts
+                            postsData={state.ProfilePage.postsData}
+                            inputText={state.inputPostText}
+                            inputPostText={inputPostText}
+                            addPost={addPost}
+                        ></Posts>
+                    );
+                }
+            }
+            </StoreContext.Consumer>
         );
     }
 }

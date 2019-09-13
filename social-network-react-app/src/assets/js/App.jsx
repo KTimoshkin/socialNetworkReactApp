@@ -10,9 +10,7 @@ function App(props) {
           <Header></Header>
             <div className="appWrapper">
                 <Sidebar></Sidebar>
-                <Content
-                    store={props.store}
-                ></Content>
+                <Content></Content>
             </div>
       </div>
   );

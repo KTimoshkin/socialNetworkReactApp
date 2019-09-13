@@ -7,8 +7,8 @@ export default class Messages extends Component{
     render() {
         return(
             <div className={Styles.messages}>
-                <MembersContainer store={this.props.store}></MembersContainer>
-                <DialoguesContainer store={this.props.store}></DialoguesContainer>
+                <MembersContainer></MembersContainer>
+                <DialoguesContainer></DialoguesContainer>
             </div>
 
         );

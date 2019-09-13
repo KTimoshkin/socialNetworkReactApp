@@ -8,7 +8,7 @@ export default class Profile extends Component{
         return(
             <div className={Styles.profile}>
                 <Profileinfo></Profileinfo>
-                <PostsContainer store={this.props.store}></PostsContainer>
+                <PostsContainer></PostsContainer>
             </div>
         );
     }

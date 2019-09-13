@@ -12,17 +12,13 @@ export default class Content extends Component{
                     path="/"
                     render={
                         () =>
-                            <Profile
-                                store={this.props.store}
-                            ></Profile>
+                            <Profile></Profile>
                     } exact></Route>
                 <Route
                     path="/messages"
                     render={
                         () =>
-                            <Messages
-                                store={this.props.store}
-                            ></Messages>
+                            <Messages></Messages>
                     }>
                 </Route>
             </div>
