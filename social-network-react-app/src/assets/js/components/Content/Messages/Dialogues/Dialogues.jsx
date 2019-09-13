@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Styles from './Dialogues.module.sass';
 import Dialog from './Dialog/Dialog'
-import {onInputMessageTextActionCreator, sendMessageActionCreator} from "../../../../services/messagesReducer";
 
 export default class Dialogues extends Component{
     dialoguesElements = this.props.dialoguesData.map((element) => {
@@ -16,19 +15,19 @@ export default class Dialogues extends Component{
 
     onHotKeyDown = (e) => {
         if(e.key === 'Enter') {
-            this.sendMessage();
+            this.onSendMessage ();
         }
     };
 
     onInputMessageText = () => {
         let newMessageText = this.newMessageElement.current.value;
-        this.props.dispatch(onInputMessageTextActionCreator(newMessageText))
+        this.props.inputMessageText(newMessageText)
     };
 
-    sendMessage = () => {
+    onSendMessage = () => {
         let newMessageText = this.newMessageElement.current.value;
         if (newMessageText){
-            this.props.dispatch(sendMessageActionCreator());
+            this.props.sendMessage();
         }
     };
 
@@ -40,11 +39,11 @@ export default class Dialogues extends Component{
                     <textarea
                         onChange={this.onInputMessageText}
                         onKeyDown={this.onHotKeyDown}
+                        value={this.props.inputText}
                         ref={this.newMessageElement}
-                        value={this.props.inputMessageText}
                         placeholder="Send message (Enter)">
                     </textarea>
-                    <button onClick={this.sendMessage}>Send</button>
+                    <button onClick={this.onSendMessage}>Send</button>
                 </div>
             </div>
         );

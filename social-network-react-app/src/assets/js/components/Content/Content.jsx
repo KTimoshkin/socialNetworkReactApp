@@ -13,8 +13,7 @@ export default class Content extends Component{
                     render={
                         () =>
                             <Profile
-                                profilePage={this.props.state.ProfilePage}
-                                dispatch={this.props.dispatch}
+                                store={this.props.store}
                             ></Profile>
                     } exact></Route>
                 <Route
@@ -22,8 +21,7 @@ export default class Content extends Component{
                     render={
                         () =>
                             <Messages
-                                messagePage={this.props.state.MessagesPage}
-                                dispatch={this.props.dispatch}
+                                store={this.props.store}
                             ></Messages>
                     }>
                 </Route>

@@ -1,18 +1,14 @@
 import React, {Component} from 'react';
 import Styles from './Profile.module.sass'
 import Profileinfo from './Profileinfo/Profileinfo'
-import Posts from './Posts/Posts'
+import PostsContainer from "./Posts/PostsContainer";
 
 export default class Profile extends Component{
     render() {
         return(
             <div className={Styles.profile}>
                 <Profileinfo></Profileinfo>
-                <Posts
-                    postsData={this.props.profilePage.postsData}
-                    inputPostText={this.props.profilePage.inputPostText}
-                    dispatch={this.props.dispatch}
-                ></Posts>
+                <PostsContainer store={this.props.store}></PostsContainer>
             </div>
         );
     }

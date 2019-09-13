@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Styles from './Posts.module.sass';
-import Post from './Post/Post'
-import {addPostActionCreator, onInputPostTextActionCreator} from "../../../../services/profileReducer";
+import Post from './Post/Post';
 
 export default class Posts extends Component{
     postsElements = this.props.postsData.map((element) => {
@@ -14,19 +13,19 @@ export default class Posts extends Component{
 
     onHotKeyDown = (e) => {
         if(e.key === 'Enter') {
-            this.addPost();
+            this.onAddPost();
         }
     };
 
     onInputPostText = () => {
         let newPostText = this.newPostsElement.current.value;
-        this.props.dispatch(onInputPostTextActionCreator(newPostText))
+        this.props.inputPostText(newPostText);
     };
 
-    addPost = () => {
+    onAddPost = () => {
         let newPostText = this.newPostsElement.current.value;
         if (newPostText){
-            this.props.dispatch(addPostActionCreator());
+            this.props.addPost()
         }
     };
 
@@ -37,10 +36,10 @@ export default class Posts extends Component{
                     <textarea onChange={this.onInputPostText}
                               ref={this.newPostsElement}
                               onKeyDown={this.onHotKeyDown}
-                              value={this.props.inputPostText}
+                              value={this.props.inputText}
                               placeholder="Add new post (Enter)">
                     </textarea>
-                    <button onClick={this.addPost}>Add post</button>
+                    <button onClick={this.onAddPost}>Add post</button>
                 </div>
                 {this.postsElements}
             </div>

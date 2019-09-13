@@ -11,8 +11,7 @@ function App(props) {
             <div className="appWrapper">
                 <Sidebar></Sidebar>
                 <Content
-                    state={props.state}
-                    dispatch={props.dispatch}
+                    store={props.store}
                 ></Content>
             </div>
       </div>
