@@ -1,19 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Members from './Members';
-import StoreContext from "../../../../services/storeContext";
+import {connect} from 'react-redux';
 
-export default class MembersContainer extends Component{
-    render() {
-        return(
-            <StoreContext.Consumer>
-                {(store) => {
-                    let state = store.getState();
-                    return (
-                        <Members membersData={state.MessagesPage.membersData}></Members>
-                    );
-                }
-            }
-            </StoreContext.Consumer>
-        );
+let mapStateToProps = (state) => {
+    return {
+        membersData: state.MessagesPage.membersData
     }
-}
+};
+
+const MembersContainer = connect(mapStateToProps)(Members);
+
+export default MembersContainer;
