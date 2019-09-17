@@ -6,6 +6,7 @@ export default class Members extends Component{
     membersElements = this.props.membersData.map((element) => {
         return(
             <Member
+                key={element.id}
                 id={element.id}
                 memberSrc={element.memberSrc}
                 memberName={element.memberName}

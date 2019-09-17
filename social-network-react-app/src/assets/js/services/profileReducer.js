@@ -3,26 +3,27 @@ const UPDATE_INPUT_POST_TEXT = 'UPDATE-INPUT-POST-TEXT';
 
 let initialState = {
     postsData: [
-        {id: 1, postText: "It's second post"},
-        {id: 2, postText: "It's first post"}
+        {id: 1, postText: "My GitHub profile: https://github.com/KTimoshkin"},
+        {id: 2, postText: "This project in GitHub: https://github.com/KTimoshkin/socialNetworkReactApp" }
     ],
     inputPostText: ''
 };
 
 export const profileReducer = (state = initialState, action) => {
-    switch (action.type){
+    switch (action.type) {
         case ADD_POST:
-            let newPost = {
-                id: 5,
-                postText: state.inputPostText
+            let newPost = state.inputPostText;
+            return {
+                ...state,
+                inputPostText: '',
+                postsData: [...state.postsData, {id: 5, postText: newPost}]
             };
-            state.postsData.push(newPost);
-            state.inputPostText = '';
-            return state;
 
         case UPDATE_INPUT_POST_TEXT:
-            state.inputPostText = action.newInputPostText;
-            return state;
+            return {
+                ...state,
+                inputPostText: action.newInputPostText
+            };
 
         default:
             return state;

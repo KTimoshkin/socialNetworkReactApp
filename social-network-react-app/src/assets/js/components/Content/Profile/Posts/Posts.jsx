@@ -5,7 +5,7 @@ import Post from './Post/Post';
 export default class Posts extends Component{
     postsElements = this.props.postsData.map((element) => {
         return(
-            <Post postText={element.postText}></Post>
+            <Post key={element.id} postText={element.postText}></Post>
         );
     });
 
@@ -13,6 +13,7 @@ export default class Posts extends Component{
 
     onHotKeyDown = (e) => {
         if(e.key === 'Enter') {
+            e.preventDefault();
             this.onAddPost();
         }
     };

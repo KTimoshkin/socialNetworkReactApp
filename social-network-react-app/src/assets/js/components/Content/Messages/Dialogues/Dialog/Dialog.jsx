@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Styles from './Dialog.module.sass';
 
-export default class Dialog extends Component{
-    render() {
-        return(
-            <div className={Styles.dialog}>
-                {this.props.dialogMessage}
+const Dialog = (props) => {
+    return(
+        <div className={Styles.dialog}>
+            {props.dialogMessage}
             </div>
-        );
-    }
+    );
 }
+
+export default Dialog;

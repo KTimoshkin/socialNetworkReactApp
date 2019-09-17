@@ -6,6 +6,7 @@ export default class Dialogues extends Component{
     dialoguesElements = this.props.dialoguesData.map((element) => {
         return(
             <Dialog
+                key={element.id}
                 dialogMessage={element.dialogMessage}
             ></Dialog>
         );
@@ -15,6 +16,7 @@ export default class Dialogues extends Component{
 
     onHotKeyDown = (e) => {
         if(e.key === 'Enter') {
+            e.preventDefault();
             this.onSendMessage ();
         }
     };
