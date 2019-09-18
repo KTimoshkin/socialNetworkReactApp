@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ad37f3f-30fb-40d7-8cb8-5a985967d806" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.module.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,23 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="friendsReducer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="friendsReducer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/services/friendsReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sidebar.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Sidebar/Sidebar.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="111">
+              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -55,32 +42,25 @@
       <file leaf-file-name="FriendsContainer.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+            <state relative-caret-position="658">
+              <caret line="73" column="77" selection-start-line="73" selection-start-column="77" selection-end-line="73" selection-end-column="77" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#249#314#0" />
+                <element signature="e#356#663#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Friends.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Friends.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="51" column="85" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="97" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Friends.module.sass" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.module.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -104,7 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Content.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Profile/Profile.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Profile/Profile.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Profile/Posts/Post/Post.jsx" />
@@ -148,13 +127,14 @@
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Members/Member/Member.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/services/reduxStore.js" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.js" />
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Sidebar/Sidebar.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.jsx" />
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/services/friendsReducer.js" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsAPIComponent.jsx" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx" />
       </list>
     </option>
   </component>
@@ -257,18 +237,6 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Content" type="462c0819:PsiDirectoryNode" />
               <item name="Friends" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialNetworkReactApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialNetworkReactApp" type="462c0819:PsiDirectoryNode" />
-              <item name="social-network-react-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-              <item name="Friends" type="462c0819:PsiDirectoryNode" />
-              <item name="Friend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="socialNetworkReactApp" type="b2602c69:ProjectViewProjectNode" />
@@ -450,12 +418,12 @@
       <workItem from="1568292435402" duration="24149000" />
       <workItem from="1568452510464" duration="935000" />
       <workItem from="1568641588411" duration="16958000" />
-      <workItem from="1568798032421" duration="7121000" />
+      <workItem from="1568798032421" duration="9398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89816000" />
+    <option name="totallyTimeSpent" value="92093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -537,16 +505,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Content.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/sass/modules/_default.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -788,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Posts/Posts.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/services/reduxStore.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -826,16 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -880,16 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="51" column="85" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="97" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.module.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -899,8 +830,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/services/friendsReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        <state relative-caret-position="111">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsAPIComponent.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="1" lean-forward="true" selection-start-line="4" selection-end-line="35" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="658">
+          <caret line="73" column="77" selection-start-line="73" selection-start-column="77" selection-end-line="73" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#249#314#0" />
+            <element signature="e#356#663#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Posts/Posts.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
