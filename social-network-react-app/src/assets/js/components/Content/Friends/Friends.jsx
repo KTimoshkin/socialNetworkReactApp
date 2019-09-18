@@ -29,14 +29,6 @@ export default class Friends extends Component{
         }
         return(
             <div className={Styles.friends}>
-                {pages.map((page) => {
-                    return(
-                        <span
-                            className={this.props.currentPage === page && Styles.selectedPage}
-                            onClick={(e) => {this.onPageChange(page)}}
-                        >{page}</span>
-                    );
-                })}
                 {this.props.friends.map((element) => {
                     return(
                         <Friend
@@ -53,6 +45,16 @@ export default class Friends extends Component{
                         );
                     })
                 }
+                <div className={Styles.pageNavigation}>
+                    {pages.map((page) => {
+                        return(
+                            <span
+                                className={this.props.currentPage === page && Styles.selectedPage}
+                                onClick={(e) => {this.onPageChange(page)}}
+                            >{page}</span>
+                        );
+                    })}
+                </div>
             </div>
         );
     }
