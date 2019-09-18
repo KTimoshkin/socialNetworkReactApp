@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Styles from './Friends.module.sass'
 import Friend from "./Friend/Friend";
 import * as axios from 'axios';
-import img from '../../../../img/user-photo.png'
 
 export default class Friends extends Component{
     componentDidMount() {
@@ -21,20 +20,6 @@ export default class Friends extends Component{
             });
     }
 
-    friendsElement = this.props.friends.map((element) => {
-        return(
-            <div >
-                <img src={ element.photos.small != null ? element.photos.small : img} alt=""/>
-                <p>{element.name}</p>
-                <p>{element.status}</p>
-                {element.followed
-                    ? <button onClick={() => this.props.unfollow(element.id)}>Отписаться</button>
-                    : <button onClick={() => this.props.follow(element.id)}>Подписаться</button>
-                }
-            </div>
-        );
-    })
-
     render() {
         let pagesCount = Math.ceil(this.props.totalFriendsCount/this.props.pageSize);
 
@@ -52,18 +37,19 @@ export default class Friends extends Component{
                         >{page}</span>
                     );
                 })}
-                {
-                this.props.friends.map((element) => {
+                {this.props.friends.map((element) => {
                     return(
-                        <div >
-                            <img src={ element.photos.small != null ? element.photos.small : img} alt=""/>
-                            <p>{element.name}</p>
-                            <p>{element.status}</p>
-                            {element.followed
-                                ? <button onClick={() => this.props.unfollow(element.id)}>Отписаться</button>
-                                : <button onClick={() => this.props.follow(element.id)}>Подписаться</button>
-                            }
-                        </div>
+                        <Friend
+                            key={element.id}
+                            id={element.id}
+                            photos={element.photos.small}
+                            name={element.name}
+                            status={element.status}
+                            followed={element.followed}
+
+                            follow={this.props.follow}
+                            unfollow={this.props.unfollow}
+                        ></Friend>
                         );
                     })
                 }
