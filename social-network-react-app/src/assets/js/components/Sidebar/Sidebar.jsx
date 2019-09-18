@@ -13,7 +13,7 @@ const Sidebar = () => {
                 <li><NavLink to="/">Profile </NavLink><img src={profileIcon} alt=""/></li>
                 <li><NavLink to="/messages">Messages</NavLink><img src={messagesIcon} alt=""/></li>
                 <li><NavLink to="/news">News</NavLink></li>
-                <li><NavLink to="/friends">Friends</NavLink><img src={friendsIcon} alt=""/></li>
+                <li><NavLink to="/friends">Find friends</NavLink><img src={friendsIcon} alt=""/></li>
                 <li><NavLink to="/settings">Settings</NavLink><img src={settingsIcon} alt=""/></li>
             </ul>
         </nav>

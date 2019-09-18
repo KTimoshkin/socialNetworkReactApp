@@ -1,16 +1,16 @@
 import React from 'react';
 import Styles from './Friend.module.sass'
+import img from '../../../../../img/user-photo.png'
 
 const Friend = (props) => {
     return(
         <div className={Styles.friend}>
+            <img src={ props.photos != null ? props.photos : img} alt=""/>
             <p>{props.fullname}</p>
             <p>{props.status}</p>
-            <p>{props.location.city}</p>
-            <p>{props.location.country}</p>
             {props.followed
-                ? <button onClick={() => props.unfollow(props.userId)}>Отписаться</button>
-                : <button onClick={() => props.follow(props.userId)}>Подписаться</button>
+                ? <button onClick={() => props.unfollowFriend(props.userId)}>Отписаться</button>
+                : <button onClick={() => props.followFriend(props.userId)}>Подписаться</button>
             }
         </div>
     );

@@ -1,9 +1,14 @@
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_FRIENDS = 'SET-USERS';
+const SET_CURRENT_PAGE = 'SET-CURRENT-PAGE';
+const SET_TOTAL_FRIENDS_COUNT = 'SET-TOTAL-FRIENDS-COUNT';
 
 let initialState = {
-    friends: []
+    friends: [],
+    pageSize: 20,
+    totalFriendsCount: 0,
+    currentPage: 1
 };
 
 export const friendsReducer = (state = initialState, action) => {
@@ -11,13 +16,13 @@ export const friendsReducer = (state = initialState, action) => {
         case SET_FRIENDS:
             return {
                 ...state,
-                friends: [...state.friends, ...action.users]
+                friends: [...action.users]
             }
         case FOLLOW:
             return {
                 ...state,
                 friends: state.friends.map(f =>  {
-                    if (f.id === action.userId){
+                    if (f.id === action.friendId){
                         return {...f, followed: true}
                     }
                     return f;
@@ -28,12 +33,24 @@ export const friendsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 friends: state.friends.map(f =>  {
-                    if (f.id === action.userId){
+                    if (f.id === action.friendId){
                         return {...f, followed: false}
                     }
                     return f;
                 })
             };
+
+        case SET_CURRENT_PAGE:
+            return {
+                ...state,
+                currentPage: action.currentPage
+            }
+
+        case SET_TOTAL_FRIENDS_COUNT:
+            return {
+                ...state,
+                totalFriendsCount: action.totalFriendsCount
+            }
 
         default:
             return state;
@@ -61,3 +78,17 @@ export const unfollowActionCreater = (userId) => {
         friendId: userId
     }
 };
+
+export const setCurrentPageActionCreater = (pageNumber) => {
+    return{
+        type: SET_CURRENT_PAGE,
+        currentPage: pageNumber
+    }
+};
+
+export const setFriendsCountActionCreater = (totalCount) => {
+    return{
+        type: SET_TOTAL_FRIENDS_COUNT,
+        totalFriendsCount: totalCount
+    }
+}
