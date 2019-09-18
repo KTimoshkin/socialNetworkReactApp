@@ -3,12 +3,14 @@ const UNFOLLOW = 'UNFOLLOW';
 const SET_FRIENDS = 'SET-USERS';
 const SET_CURRENT_PAGE = 'SET-CURRENT-PAGE';
 const SET_TOTAL_FRIENDS_COUNT = 'SET-TOTAL-FRIENDS-COUNT';
+const SET_IS_FETCHING = 'SET-IS-FETCHING';
 
 let initialState = {
     friends: [],
     pageSize: 20,
     totalFriendsCount: 0,
-    currentPage: 1
+    currentPage: 1,
+    isFetching: false
 };
 
 export const friendsReducer = (state = initialState, action) => {
@@ -17,7 +19,8 @@ export const friendsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 friends: [...action.users]
-            }
+            };
+
         case FOLLOW:
             return {
                 ...state,
@@ -44,12 +47,18 @@ export const friendsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 currentPage: action.currentPage
-            }
+            };
 
         case SET_TOTAL_FRIENDS_COUNT:
             return {
                 ...state,
                 totalFriendsCount: action.totalFriendsCount
+            };
+
+        case SET_IS_FETCHING:
+            return {
+                ...state,
+                isFetching: action.isFetching
             }
 
         default:
@@ -63,7 +72,7 @@ export const setFriendsActionCreater = (users) => {
         type: SET_FRIENDS,
         users: users
     }
-}
+};
 
 export const followActionCreater = (userId) => {
     return{
@@ -91,4 +100,11 @@ export const setFriendsCountActionCreater = (totalCount) => {
         type: SET_TOTAL_FRIENDS_COUNT,
         totalFriendsCount: totalCount
     }
-}
+};
+
+export const setIsFetchingActionCreater = (isFetch) => {
+    return{
+        type: SET_IS_FETCHING,
+        isFetching: isFetch
+    }
+};

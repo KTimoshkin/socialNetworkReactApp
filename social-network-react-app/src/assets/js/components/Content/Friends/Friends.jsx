@@ -1,6 +1,6 @@
 import React from 'react';
-import Styles from './Friends.module.sass'
-import Friend from "./Friend/Friend";
+import Styles from './Friends.module.sass';
+import Friend from './Friend/Friend';
 
 const Friends = (props) => {
     let pagesCount = Math.ceil(props.totalFriendsCount/props.pageSize);
