@@ -60,7 +60,7 @@ let mapStateToProps = (state) => {
     }
 };
 
-let mapDispatchToProps = (dispatch) => {
+/*let mapDispatchToProps = (dispatch) => {
     return {
         follow: (userId) => {
             dispatch(followActionCreater(userId));
@@ -81,8 +81,13 @@ let mapDispatchToProps = (dispatch) => {
             dispatch(setIsFetchingActionCreater(isFetch));
         }
     }
-};
+};*/
 
-const FriendsContainer = connect(mapStateToProps, mapDispatchToProps)(FriendsComponent);
-
-export default FriendsContainer;
+export default connect(mapStateToProps, {
+        follow: followActionCreater,
+        unfollow: unfollowActionCreater,
+        setFriends: setFriendsActionCreater,
+        setCurrentPage: setCurrentPageActionCreater,
+        setFriendsCount: setFriendsCountActionCreater,
+        setIsFetchingActionCreater: setIsFetchingActionCreater,
+})(FriendsComponent);
