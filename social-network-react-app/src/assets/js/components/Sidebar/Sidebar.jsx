@@ -10,7 +10,7 @@ const Sidebar = () => {
     return(
         <nav className={Styles.sidebar}>
             <ul>
-                <li><NavLink to="/">Profile </NavLink><img src={profileIcon} alt=""/></li>
+                <li><NavLink to="/profile">Profile </NavLink><img src={profileIcon} alt=""/></li>
                 <li><NavLink to="/messages">Messages</NavLink><img src={messagesIcon} alt=""/></li>
                 <li><NavLink to="/news">News</NavLink></li>
                 <li><NavLink to="/friends">Find friends</NavLink><img src={friendsIcon} alt=""/></li>

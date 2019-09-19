@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7ad37f3f-30fb-40d7-8cb8-5a985967d806" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Dialogues/DialoguesContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Dialogues/DialoguesContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Members/MembersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Members/MembersContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Posts/PostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Posts/PostsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.module.sass" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.module.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-network-react-app/src/assets/js/services/profileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/social-network-react-app/src/assets/js/services/profileReducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,16 +29,61 @@
         <entry file="file://$PROJECT_DIR$/social-network-react-app/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FriendsContainer.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx">
+      <file leaf-file-name="Content.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Content.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="62" column="2" selection-start-line="62" selection-end-line="83" selection-end-column="4" />
+            <state relative-caret-position="119">
+              <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Friends.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profileReducer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/services/profileReducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileContainer.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/ProfileContainer.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Profileinfo.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="101" selection-start-line="24" selection-start-column="101" selection-end-line="24" selection-end-column="101" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -61,12 +110,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Profile/Posts/Posts.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Profile/Posts/Posts.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Profile/Posts/Post/Post.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Messages/Messages.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Messages/Messages.jsx" />
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profile.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Members/Members.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Header/Header.module.sass" />
@@ -81,26 +128,18 @@
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/sass/styles.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/services/storeContext.js" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Sidebar/Sidebar.module.sass" />
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Header/Header.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/App.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/index.js" />
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profile.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Messages.jsx" />
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Members/Members.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Posts/Posts.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Dialogues/Dialogues.jsx" />
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/services/profileReducer.js" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/services/messagesReducer.js" />
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Content.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Posts/Post/Post.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Dialogues/Dialog/Dialog.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Members/Member/Member.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/services/reduxStore.js" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.js" />
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Sidebar/Sidebar.jsx" />
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.jsx" />
-        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.module.sass" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsAPIComponent.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx" />
@@ -112,6 +151,16 @@
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Dialogues/DialoguesContainer.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Posts/PostsContainer.jsx" />
         <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.module.sass" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.jsx" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Sidebar/Sidebar.jsx" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Header/Header.jsx" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/services/profileReducer.js" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profile.jsx" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/ProfileContainer.jsx" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.module.sass" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.jsx" />
+        <option value="$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Content.jsx" />
       </list>
     </option>
   </component>
@@ -213,7 +262,19 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Content" type="462c0819:PsiDirectoryNode" />
-              <item name="Messages" type="462c0819:PsiDirectoryNode" />
+              <item name="Friends" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialNetworkReactApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialNetworkReactApp" type="462c0819:PsiDirectoryNode" />
+              <item name="social-network-react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Content" type="462c0819:PsiDirectoryNode" />
+              <item name="Friends" type="462c0819:PsiDirectoryNode" />
+              <item name="Friend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="socialNetworkReactApp" type="b2602c69:ProjectViewProjectNode" />
@@ -225,19 +286,6 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Content" type="462c0819:PsiDirectoryNode" />
               <item name="Messages" type="462c0819:PsiDirectoryNode" />
-              <item name="Dialogues" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="socialNetworkReactApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="socialNetworkReactApp" type="462c0819:PsiDirectoryNode" />
-              <item name="social-network-react-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Content" type="462c0819:PsiDirectoryNode" />
-              <item name="Messages" type="462c0819:PsiDirectoryNode" />
-              <item name="Members" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="socialNetworkReactApp" type="b2602c69:ProjectViewProjectNode" />
@@ -260,7 +308,7 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Content" type="462c0819:PsiDirectoryNode" />
               <item name="Profile" type="462c0819:PsiDirectoryNode" />
-              <item name="Posts" type="462c0819:PsiDirectoryNode" />
+              <item name="Profileinfo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="socialNetworkReactApp" type="b2602c69:ProjectViewProjectNode" />
@@ -291,7 +339,26 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialNetworkReactApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialNetworkReactApp" type="462c0819:PsiDirectoryNode" />
+              <item name="social-network-react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Sidebar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="socialNetworkReactApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="socialNetworkReactApp" type="462c0819:PsiDirectoryNode" />
+              <item name="social-network-react-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="socialNetworkReactApp" type="b2602c69:ProjectViewProjectNode" />
@@ -370,27 +437,28 @@
       <workItem from="1568292435402" duration="24149000" />
       <workItem from="1568452510464" duration="935000" />
       <workItem from="1568641588411" duration="16958000" />
-      <workItem from="1568798032421" duration="13485000" />
+      <workItem from="1568798032421" duration="14304000" />
+      <workItem from="1568880531324" duration="2942000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96180000" />
+    <option name="totallyTimeSpent" value="99941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23034154" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23034154" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32965517" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.34896553" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.34896553" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -404,7 +472,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23034154" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23034154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -412,7 +480,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.34896553" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.34896553" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32965517" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -453,38 +521,17 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Content.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/package.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profile.module.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Header/Header.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -564,13 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Header/Header.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -581,34 +621,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Posts/Post/Post.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profile.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Content.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -640,33 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Dialogues/Dialogues.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/services/profileReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Sidebar/Sidebar.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Posts/Posts.module.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -688,23 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.module.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.module.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -712,16 +684,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsAPIComponent.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="4" selection-end-line="35" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsAPIComponent.jsx" />
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Posts/Posts.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -747,9 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,23 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Dialogues/DialoguesContainer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/global/Preloader/Preloader.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -804,10 +747,112 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Header/Header.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Sidebar/Sidebar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Header/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Dialogues/DialoguesContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Messages/Dialogues/Dialogues.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/services/profileReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/ProfileContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friends.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+        <state relative-caret-position="159">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/Friend/Friend.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.module.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profile.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -816,8 +861,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Friends/FriendsContainer.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="62" column="2" selection-start-line="62" selection-end-line="83" selection-end-column="4" />
+        <state relative-caret-position="203">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Profile/Profileinfo/Profileinfo.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="101" selection-start-line="24" selection-start-column="101" selection-end-line="24" selection-end-column="101" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/social-network-react-app/src/assets/js/components/Content/Content.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

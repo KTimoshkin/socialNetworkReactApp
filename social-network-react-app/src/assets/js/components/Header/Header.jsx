@@ -8,7 +8,7 @@ const Header = ()=> {
         <header>
             <div className={Styles.header}>
                 <div className={Styles.siteLogo}>
-                    <NavLink to="/" >
+                    <NavLink to="/profile" >
                         <img src={img} alt="site logo"/>
                         <b>Social Network on ReactJs</b>
                     </NavLink>

@@ -1,33 +1,31 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
 import Styles from './Content.module.sass'
-import Profile from './Profile/Profile'
+import ProfileContainer from './Profile/ProfileContainer'
 import Messages from './Messages/Messages'
-import Friends from "./Friends/FriendsContainer";
+import FriendsContainer from "./Friends/FriendsContainer";
 
 const Content = () => {
     return(
         <div className={Styles.content}>
             <Route
-                path="/"
+                path="/profile/:userId?"
                 render={
                     () =>
-                        <Profile></Profile>
-                } exact></Route>
+                        <ProfileContainer></ProfileContainer>
+                }></Route>
             <Route
                 path="/messages"
                 render={
                     () =>
                         <Messages></Messages>
-                }>
-            </Route>
+                }></Route>
             <Route
                 path="/friends"
                 render={
                     () =>
-                        <Friends></Friends>
-                }>
-            </Route>
+                        <FriendsContainer></FriendsContainer>
+                }></Route>
         </div>
     );
 }

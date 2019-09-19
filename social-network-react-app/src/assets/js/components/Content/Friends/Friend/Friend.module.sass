@@ -5,20 +5,27 @@
   display: flex
   padding: 10px
   margin-bottom: 20px
-  .friendLogo
-    img
-      width: 60px
-      height: 60px
-      border: 1px solid #00dcfc
-      border-radius: 50%
-      padding: 2px
-  .friendInfo
-    margin-left: 40px
-    color: #252525
-    h1
-      margin: 0
-    p
-      margin: 0
+  transition: 0.5s
+  a
+    align-items: center
+    display: flex
+    text-decoration: none
+    .friendLogo
+      img
+        width: 60px
+        height: 60px
+        border: 1px solid #00dcfc
+        border-radius: 50%
+        padding: 2px
+    .friendInfo
+      margin-left: 40px
+      color: #252525
+      h1
+        margin: 0
+      p
+        margin: 0
+  &:hover
+    opacity: 0.7
   .friendFollowBtn
     text-align: right
     flex-grow: 1
