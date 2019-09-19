@@ -12,10 +12,10 @@ import Preloader from "../../global/Preloader/Preloader";
 
 class FriendsComponent extends React.Component{
     componentDidMount() {
-        this.props.setIsFetchingActionCreater(true);
+        this.props.setIsFetching(true);
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
             .then(response => {
-                this.props.setIsFetchingActionCreater(false);
+                this.props.setIsFetching(false);
                 this.props.setFriends(response.data.items);
                 this.props.setFriendsCount(response.data.totalCount);
             });
@@ -89,5 +89,5 @@ export default connect(mapStateToProps, {
         setFriends: setFriendsActionCreater,
         setCurrentPage: setCurrentPageActionCreater,
         setFriendsCount: setFriendsCountActionCreater,
-        setIsFetchingActionCreater: setIsFetchingActionCreater,
+        setIsFetching: setIsFetchingActionCreater,
 })(FriendsComponent);

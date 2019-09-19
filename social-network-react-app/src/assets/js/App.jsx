@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.sass'
-import Header from './components/Header/Header';
+import HeaderContainer from './components/Header/HeaderContainer';
 import Sidebar from './components/Sidebar/Sidebar';
 import Content from './components/Content/Content';
 
 const App = () => {
   return (
       <div className="app">
-          <Header></Header>
+          <HeaderContainer></HeaderContainer>
             <div className="appWrapper">
                 <Sidebar></Sidebar>
                 <Content></Content>
