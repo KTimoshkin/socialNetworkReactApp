@@ -2,6 +2,8 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import Styles from './Friend.module.sass'
 import img from '../../../../../img/user-photo.png'
+import {friendsAPI} from "../../../../api/api";
+import Button from "../../../global/Button/Button";
 
 const Friend = (props) => {
     return(
@@ -17,8 +19,28 @@ const Friend = (props) => {
             </NavLink>
             <div className={Styles.friendFollowBtn}>
                 {props.followed
-                    ? <button onClick={() => props.unfollow(props.id)}>Unfollow</button>
-                    : <button onClick={() => props.follow(props.id)}>Follow</button>
+                    ? <Button
+                        btnText="Unfollow"
+                        btnOnClick={() => {
+                            friendsAPI.unfollow(props.id).then(response => {
+                                if (response.data.resultCode == 0){
+                                        props.unfollow(props.id)
+                                    }
+                                });
+                            }
+                        }
+                    ></Button>
+                    : <Button
+                        btnText="Follow"
+                        btnOnClick={() => {
+                            friendsAPI.follow(props.id).then(response => {
+                                if (response.data.resultCode == 0){
+                                    props.follow(props.id)
+                                }
+                            });
+                        }
+                    }
+                    ></Button>
                 }
             </div>
         </div>

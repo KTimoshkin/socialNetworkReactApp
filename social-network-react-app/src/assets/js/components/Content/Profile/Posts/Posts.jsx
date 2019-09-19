@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Styles from './Posts.module.sass';
 import Post from './Post/Post';
+import Button from "../../../global/Button/Button";
 
 export default class Posts extends Component{
     postsElements = this.props.postsData.map((element) => {
@@ -40,7 +41,11 @@ export default class Posts extends Component{
                               value={this.props.inputText}
                               placeholder="Add new post (Enter)">
                     </textarea>
-                    <button onClick={this.onAddPost}>Add post</button>
+                    <br/>
+                    <Button
+                        btnText="Add post"
+                        btnOnClick={this.onAddPost}
+                    ></Button>
                 </div>
                 {this.postsElements}
             </div>

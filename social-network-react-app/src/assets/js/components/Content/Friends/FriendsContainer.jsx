@@ -6,28 +6,27 @@ import {
     setFriendsActionCreater, setFriendsCountActionCreater, setIsFetchingActionCreater,
     unfollowActionCreater,
 } from "../../../services/friendsReducer";
-import * as axios from 'axios';
 import Friends from "./Friends";
 import Preloader from "../../global/Preloader/Preloader";
+import {friendsAPI} from "../../../api/api";
 
 class FriendsComponent extends React.Component{
     componentDidMount() {
         this.props.setIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
-            .then(response => {
+
+        friendsAPI.getFriends(this.props.currentPage, this.props.pageSize).then(response => {
                 this.props.setIsFetching(false);
-                this.props.setFriends(response.data.items);
-                this.props.setFriendsCount(response.data.totalCount);
+                this.props.setFriends(response.items);
+                this.props.setFriendsCount(response.totalCount);
             });
     }
 
     onPageChange = (page) => {
         this.props.setCurrentPage(page);
-        this.props.setIsFetchingActionCreater(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${page}&count=${this.props.pageSize}`)
-            .then(response => {
-                this.props.setIsFetchingActionCreater(false);
-                this.props.setFriends(response.data.items);
+        this.props.setIsFetching(true);
+        friendsAPI.getFriends(page, this.props.pageSize).then(response => {
+                this.props.setIsFetching(false);
+                this.props.setFriends(response.items);
             });
     }
 

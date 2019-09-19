@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Styles from './Dialogues.module.sass';
 import Dialog from './Dialog/Dialog'
+import Button from "../../../global/Button/Button";
 
 export default class Dialogues extends Component{
     dialoguesElements = this.props.dialoguesData.map((element) => {
@@ -45,7 +46,10 @@ export default class Dialogues extends Component{
                         ref={this.newMessageElement}
                         placeholder="Send message (Enter)">
                     </textarea>
-                    <button onClick={this.onSendMessage}>Send</button>
+                    <Button
+                        btnText="Send"
+                        btnOnClick={this.onSendMessage}
+                    ></Button>
                 </div>
             </div>
         );

@@ -36,7 +36,7 @@ const Friends = (props) => {
     })
 
     return(
-        <div className={Styles.friends}>
+        <div className={Styles.friends} key={props.id}>
             {friendsElement}
             <div className={Styles.pageNavigation}>
                 {navigationsElements}
