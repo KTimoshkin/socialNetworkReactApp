@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Styles from './Members.module.sass';
 import Member from './Member/Member'
 
-export default class Members extends Component{
-    membersElements = this.props.membersData.map((element) => {
+const Members = (props) => {
+    let membersElements = props.membersData.map((element) => {
         return(
             <Member
                 key={element.id}
@@ -14,11 +14,11 @@ export default class Members extends Component{
         );
     });
 
-    render() {
-        return(
-            <div className={Styles.members}>
-                {this.membersElements}
-            </div>
-        );
-    }
+    return(
+        <div className={Styles.members}>
+            {membersElements}
+        </div>
+    );
 }
+
+export default Members;

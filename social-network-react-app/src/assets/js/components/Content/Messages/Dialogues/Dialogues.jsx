@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Styles from './Dialogues.module.sass';
 import Dialog from './Dialog/Dialog'
 import Button from "../../../global/Button/Button";
+import {Redirect} from "react-router-dom";
 
-export default class Dialogues extends Component{
-    dialoguesElements = this.props.dialoguesData.map((element) => {
+const Dialogues = (props) => {
+    let dialoguesElements = props.dialoguesData.map((element) => {
         return(
             <Dialog
                 key={element.id}
@@ -13,45 +14,49 @@ export default class Dialogues extends Component{
         );
     });
 
-    newMessageElement = React.createRef();
+    let newMessageElement = React.createRef();
 
-    onHotKeyDown = (e) => {
+    const onHotKeyDown = (e) => {
         if(e.key === 'Enter') {
             e.preventDefault();
-            this.onSendMessage ();
+            onSendMessage ();
         }
     };
 
-    onInputMessageText = () => {
-        let newMessageText = this.newMessageElement.current.value;
-        this.props.inputMessageText(newMessageText)
+    const onInputMessageText = () => {
+        let newMessageText = newMessageElement.current.value;
+        props.inputMessageText(newMessageText)
     };
 
-    onSendMessage = () => {
-        let newMessageText = this.newMessageElement.current.value;
+    const onSendMessage = () => {
+        let newMessageText = newMessageElement.current.value;
         if (newMessageText){
-            this.props.sendMessage();
+            props.sendMessage();
         }
     };
 
-    render() {
-        return(
+    if (props.isAuth == false) {
+        return <Redirect to={'./login'}/>
+    } else {
+        return (
             <div className={Styles.dialogues}>
-                {this.dialoguesElements}
+                {dialoguesElements}
                 <div className={Styles.sendMessage}>
                     <textarea
-                        onChange={this.onInputMessageText}
-                        onKeyDown={this.onHotKeyDown}
-                        value={this.props.inputText}
-                        ref={this.newMessageElement}
+                        onChange={onInputMessageText}
+                        onKeyDown={onHotKeyDown}
+                        value={props.inputText}
+                        ref={newMessageElement}
                         placeholder="Send message (Enter)">
                     </textarea>
                     <Button
                         btnText="Send"
-                        btnOnClick={this.onSendMessage}
+                        btnOnClick={onSendMessage}
                     ></Button>
                 </div>
             </div>
         );
     }
-}
+};
+
+export default Dialogues;

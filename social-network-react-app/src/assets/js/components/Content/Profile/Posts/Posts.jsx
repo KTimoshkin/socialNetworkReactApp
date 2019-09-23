@@ -3,52 +3,52 @@ import Styles from './Posts.module.sass';
 import Post from './Post/Post';
 import Button from "../../../global/Button/Button";
 
-export default class Posts extends Component{
-    postsElements = this.props.postsData.map((element) => {
+const Posts = (props) => {
+    let postsElements = props.postsData.map((element) => {
         return(
             <Post key={element.id} postText={element.postText}></Post>
         );
     });
 
-    newPostsElement = React.createRef();
+    let newPostsElement = React.createRef();
 
-    onHotKeyDown = (e) => {
+    const onHotKeyDown = (e) => {
         if(e.key === 'Enter') {
             e.preventDefault();
-            this.onAddPost();
+            onAddPost();
         }
     };
 
-    onInputPostText = () => {
-        let newPostText = this.newPostsElement.current.value;
-        this.props.inputPostText(newPostText);
+    const onInputPostText = () => {
+        let newPostText = newPostsElement.current.value;
+        props.inputPostText(newPostText);
     };
 
-    onAddPost = () => {
-        let newPostText = this.newPostsElement.current.value;
+    const onAddPost = () => {
+        let newPostText = newPostsElement.current.value;
         if (newPostText){
-            this.props.addPost()
+            props.addPost()
         }
     };
 
-    render() {
-        return(
-            <div className={Styles.posts}>
-                <div className={Styles.addPosts}>
-                    <textarea onChange={this.onInputPostText}
-                              ref={this.newPostsElement}
-                              onKeyDown={this.onHotKeyDown}
-                              value={this.props.inputText}
-                              placeholder="Add new post (Enter)">
-                    </textarea>
-                    <br/>
-                    <Button
-                        btnText="Add post"
-                        btnOnClick={this.onAddPost}
-                    ></Button>
-                </div>
-                {this.postsElements}
+    return(
+        <div className={Styles.posts}>
+            <div className={Styles.addPosts}>
+                <textarea onChange={onInputPostText}
+                          ref={newPostsElement}
+                          onKeyDown={onHotKeyDown}
+                          value={props.inputText}
+                          placeholder="Add new post (Enter)">
+                </textarea>
+                <br/>
+                <Button
+                    btnText="Add post"
+                    btnOnClick={onAddPost}
+                ></Button>
             </div>
-        );
-    }
-}
+            {postsElements}
+            </div>
+    );
+};
+
+export default Posts;

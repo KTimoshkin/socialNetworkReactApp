@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Profile from "./Profile";
 import {connect} from "react-redux";
 import {getUserThunkCreator} from "../../../services/profileReducer";
-import {withRouter} from "react-router-dom";
+import {Redirect, withRouter} from "react-router-dom";
 
 class ProfileContainer extends Component{
     componentDidMount() {
@@ -13,15 +13,20 @@ class ProfileContainer extends Component{
         this.props.getProfile(userId);
     }
     render() {
-        return(
-            <Profile {...this.props} profile={this.props.profile}></Profile>
-        );
+        if (this.props.isAuth == false){
+            return <Redirect to={'./login'}/>
+        } else {
+            return(
+                <Profile {...this.props} profile={this.props.profile}></Profile>
+            );
+        }
     }
 }
 
 let mapStateToProps = (state) => {
     return {
-        profile: state.ProfilePage.profile
+        profile: state.ProfilePage.profile,
+        isAuth: state.auth.isAuth
     }
 };
 

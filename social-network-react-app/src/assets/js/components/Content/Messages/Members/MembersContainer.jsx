@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 let mapStateToProps = (state) => {
     return {
-        membersData: state.MessagesPage.membersData
+        membersData: state.MessagesPage.membersData,
     }
 };
 
