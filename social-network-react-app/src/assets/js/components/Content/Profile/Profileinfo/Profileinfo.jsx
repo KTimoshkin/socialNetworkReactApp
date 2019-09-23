@@ -2,6 +2,7 @@ import React from 'react';
 import Styles from './Profileinfo.module.sass'
 import Preloader from "../../../global/Preloader/Preloader";
 import img from '../../../../../img/user-photo.png'
+import ProfileStatus from "./ProfileStatus/ProfileStatus";
 
 const Profileinfo = (props) => {
     if (!props.profile){
@@ -22,6 +23,7 @@ const Profileinfo = (props) => {
                 </div>
                 <div className={Styles.title}>
                     <h1>{props.profile.fullName}</h1>
+                    <ProfileStatus ></ProfileStatus>
                     <small>{props.profile.aboutMe != null ? props.profile.aboutMe : '"About me" is null'}</small>
                 </div>
             </div>

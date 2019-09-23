@@ -7,6 +7,7 @@ import {
 import Friends from "./Friends";
 import Preloader from "../../global/Preloader/Preloader";
 import {AuthRedirect} from "../../../hoc/AuthRedirect";
+import {compose} from "redux";
 
 class FriendsContainer extends React.Component{
     componentDidMount() {
@@ -47,34 +48,12 @@ let mapStateToProps = (state) => {
     }
 };
 
-const RedirectAuthComponent = AuthRedirect(FriendsContainer);
-
-/*let mapDispatchToProps = (dispatch) => {
-    return {
-        follow: (userId) => {
-            dispatch(followActionCreater(userId));
-        },
-        unfollow: (userId) => {
-            dispatch(unfollowActionCreater(userId));
-        },
-        setFriends: (users) => {
-            dispatch(setFriendsActionCreater(users));
-        },
-        setCurrentPage: (pageNumber) => {
-            dispatch(setCurrentPageActionCreater(pageNumber));
-        },
-        setFriendsCount: (totalCount) => {
-            dispatch(setFriendsCountActionCreater(totalCount));
-        },
-        setIsFetchingActionCreater: (isFetch) => {
-            dispatch(setIsFetchingActionCreater(isFetch));
-        }
-    }
-};*/
-
-export default connect(mapStateToProps, {
-    follow: followThunkCreator,
-    unfollow: unfollowThunkCreator,
-    setCurrentPage: setCurrentPageActionCreater,
-    getFriends: getFriendsThunkCreator
-})(RedirectAuthComponent);
+export default compose(
+    connect(mapStateToProps, {
+        follow: followThunkCreator,
+        unfollow: unfollowThunkCreator,
+        setCurrentPage: setCurrentPageActionCreater,
+        getFriends: getFriendsThunkCreator
+    }),
+    AuthRedirect)
+(FriendsContainer);

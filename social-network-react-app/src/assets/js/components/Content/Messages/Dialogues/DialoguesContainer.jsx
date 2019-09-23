@@ -4,6 +4,7 @@ import {onInputMessageTextActionCreator, sendMessageActionCreator} from "../../.
 import {connect} from 'react-redux'
 import {Redirect} from "react-router-dom";
 import {AuthRedirect} from "../../../../hoc/AuthRedirect";
+import {compose} from "redux";
 
 let mapStateToProps = (state) => {
     return {
@@ -23,6 +24,7 @@ let mapDispatchToProps = (dispatch) => {
     }
 };
 
-const RedirectAuthComponent = AuthRedirect(Dialogues);
-
-export default connect(mapStateToProps, mapDispatchToProps)(RedirectAuthComponent);
+export default compose(
+    connect(mapStateToProps, mapDispatchToProps),
+    AuthRedirect)
+(Dialogues);
