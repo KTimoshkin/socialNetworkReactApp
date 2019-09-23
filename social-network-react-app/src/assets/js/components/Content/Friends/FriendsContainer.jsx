@@ -1,33 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {
-    followActionCreater,
-    setCurrentPageActionCreater,
-    setFriendsActionCreater, setFriendsCountActionCreater, setIsFetchingActionCreater,
-    unfollowActionCreater,
+    followThunkCreator, getFriendsThunkCreator,
+    setCurrentPageActionCreater, unfollowThunkCreator,
 } from "../../../services/friendsReducer";
 import Friends from "./Friends";
 import Preloader from "../../global/Preloader/Preloader";
-import {friendsAPI} from "../../../api/api";
 
 class FriendsComponent extends React.Component{
     componentDidMount() {
-        this.props.setIsFetching(true);
-
-        friendsAPI.getFriends(this.props.currentPage, this.props.pageSize).then(response => {
-                this.props.setIsFetching(false);
-                this.props.setFriends(response.items);
-                this.props.setFriendsCount(response.totalCount);
-            });
+        this.props.getFriends(this.props.currentPage, this.props.pageSize);
     }
 
     onPageChange = (page) => {
         this.props.setCurrentPage(page);
-        this.props.setIsFetching(true);
-        friendsAPI.getFriends(page, this.props.pageSize).then(response => {
-                this.props.setIsFetching(false);
-                this.props.setFriends(response.items);
-            });
+        this.props.getFriends(page, this.props.pageSize);
     }
 
     render() {
@@ -83,10 +70,8 @@ let mapStateToProps = (state) => {
 };*/
 
 export default connect(mapStateToProps, {
-        follow: followActionCreater,
-        unfollow: unfollowActionCreater,
-        setFriends: setFriendsActionCreater,
-        setCurrentPage: setCurrentPageActionCreater,
-        setFriendsCount: setFriendsCountActionCreater,
-        setIsFetching: setIsFetchingActionCreater,
+    follow: followThunkCreator,
+    unfollow: unfollowThunkCreator,
+    setCurrentPage: setCurrentPageActionCreater,
+    getFriends: getFriendsThunkCreator
 })(FriendsComponent);

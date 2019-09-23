@@ -1,3 +1,5 @@
+import {friendsAPI} from "../api/api";
+
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_FRIENDS = 'SET-USERS';
@@ -106,5 +108,37 @@ export const setIsFetchingActionCreater = (isFetch) => {
     return{
         type: SET_IS_FETCHING,
         isFetching: isFetch
+    }
+};
+
+export const getFriendsThunkCreator = (currentPage, pageSize) => {
+    return (dispatch) => {
+        dispatch(setIsFetchingActionCreater(true));
+
+        friendsAPI.getFriends(currentPage, pageSize).then(response => {
+            dispatch(setIsFetchingActionCreater(false));
+            dispatch(setFriendsActionCreater(response.items));
+            dispatch(setFriendsCountActionCreater(response.totalCount));
+        });
+    }
+};
+
+export const followThunkCreator = (id) => {
+    return (dispatch) => {
+        friendsAPI.follow(id).then(response => {
+            if (response.data.resultCode == 0){
+                dispatch(followActionCreater(id));
+            }
+        });
+    }
+}
+
+export const unfollowThunkCreator = (id) => {
+    return (dispatch) => {
+        friendsAPI.unfollow(id).then(response => {
+            if (response.data.resultCode == 0){
+                dispatch(unfollowActionCreater(id));
+            }
+        });
     }
 };
