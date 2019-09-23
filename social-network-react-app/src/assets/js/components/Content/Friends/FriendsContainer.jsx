@@ -6,8 +6,9 @@ import {
 } from "../../../services/friendsReducer";
 import Friends from "./Friends";
 import Preloader from "../../global/Preloader/Preloader";
+import {AuthRedirect} from "../../../hoc/AuthRedirect";
 
-class FriendsComponent extends React.Component{
+class FriendsContainer extends React.Component{
     componentDidMount() {
         this.props.getFriends(this.props.currentPage, this.props.pageSize);
     }
@@ -46,6 +47,8 @@ let mapStateToProps = (state) => {
     }
 };
 
+const RedirectAuthComponent = AuthRedirect(FriendsContainer);
+
 /*let mapDispatchToProps = (dispatch) => {
     return {
         follow: (userId) => {
@@ -74,4 +77,4 @@ export default connect(mapStateToProps, {
     unfollow: unfollowThunkCreator,
     setCurrentPage: setCurrentPageActionCreater,
     getFriends: getFriendsThunkCreator
-})(FriendsComponent);
+})(RedirectAuthComponent);

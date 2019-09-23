@@ -2,7 +2,6 @@ import React from 'react';
 import Styles from './Dialogues.module.sass';
 import Dialog from './Dialog/Dialog'
 import Button from "../../../global/Button/Button";
-import {Redirect} from "react-router-dom";
 
 const Dialogues = (props) => {
     let dialoguesElements = props.dialoguesData.map((element) => {
@@ -35,28 +34,24 @@ const Dialogues = (props) => {
         }
     };
 
-    if (props.isAuth == false) {
-        return <Redirect to={'./login'}/>
-    } else {
-        return (
-            <div className={Styles.dialogues}>
-                {dialoguesElements}
-                <div className={Styles.sendMessage}>
-                    <textarea
-                        onChange={onInputMessageText}
-                        onKeyDown={onHotKeyDown}
-                        value={props.inputText}
-                        ref={newMessageElement}
-                        placeholder="Send message (Enter)">
-                    </textarea>
-                    <Button
-                        btnText="Send"
-                        btnOnClick={onSendMessage}
-                    ></Button>
-                </div>
+    return (
+        <div className={Styles.dialogues}>
+            {dialoguesElements}
+            <div className={Styles.sendMessage}>
+                <textarea
+                    onChange={onInputMessageText}
+                    onKeyDown={onHotKeyDown}
+                    value={props.inputText}
+                    ref={newMessageElement}
+                    placeholder="Send message (Enter)">
+                </textarea>
+                <Button
+                    btnText="Send"
+                    btnOnClick={onSendMessage}
+                ></Button>
             </div>
-        );
-    }
+        </div>
+    );
 };
 
 export default Dialogues;
