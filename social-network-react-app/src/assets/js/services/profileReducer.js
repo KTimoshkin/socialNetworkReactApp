@@ -3,6 +3,7 @@ import {profileAPI} from "../api/api";
 const ADD_POST = 'ADD-POST';
 const UPDATE_INPUT_POST_TEXT = 'UPDATE-INPUT-POST-TEXT';
 const SET_PROFILE = 'SET-USER-PROFILE';
+const SET_STATUS = 'SET-STATUS';
 
 let initialState = {
     postsData: [
@@ -10,7 +11,8 @@ let initialState = {
         {id: 2, postText: "This project in GitHub: https://github.com/KTimoshkin/socialNetworkReactApp" }
     ],
     inputPostText: '',
-    profile: null
+    profile: null,
+    status: ''
 };
 
 export const profileReducer = (state = initialState, action) => {
@@ -33,6 +35,12 @@ export const profileReducer = (state = initialState, action) => {
             return{
                 ...state,
                 profile: action.profileId
+            };
+
+        case SET_STATUS:
+            return{
+                ...state,
+                status: action.status
             }
 
         default:
@@ -61,10 +69,35 @@ export const setProfileActionCreater = (profileId) => {
     }
 };
 
+export const setStatusActionCreater = (status) => {
+    return {
+        type: SET_STATUS,
+        status: status
+    }
+};
+
 export const getUserThunkCreator = (profile) => {
     return (dispatch) => {
         profileAPI.getUser(profile).then(response => {
             dispatch(setProfileActionCreater(response.data));
         });
     }
-}
+};
+
+export const getStatusThunkCreator = (profile) => {
+    return (dispatch) => {
+        profileAPI.getStatus(profile).then(response => {
+            dispatch(setStatusActionCreater(response.data));
+        });
+    }
+};
+
+export const updateStatusThunkCreator = (status) => {
+    return (dispatch) => {
+        profileAPI.updateStatus(status).then(response => {
+            if (response.data.resultCode == 0) {
+                dispatch(setStatusActionCreater(status));
+            }
+        });
+    }
+};

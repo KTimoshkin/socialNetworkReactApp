@@ -23,7 +23,7 @@ const Profileinfo = (props) => {
                 </div>
                 <div className={Styles.title}>
                     <h1>{props.profile.fullName}</h1>
-                    <ProfileStatus ></ProfileStatus>
+                    <ProfileStatus status={props.status} updateStatus={props.updateStatus}></ProfileStatus>
                     <small>{props.profile.aboutMe != null ? props.profile.aboutMe : '"About me" is null'}</small>
                 </div>
             </div>
