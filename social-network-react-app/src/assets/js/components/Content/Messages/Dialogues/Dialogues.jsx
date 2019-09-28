@@ -1,7 +1,7 @@
 import React from 'react';
 import Styles from './Dialogues.module.sass';
 import Dialog from './Dialog/Dialog'
-import Button from "../../../global/Button/Button";
+import ReduxSendMessageForm from "./SendMessageForm/SendMessageForm";
 
 const Dialogues = (props) => {
     let dialoguesElements = props.dialoguesData.map((element) => {
@@ -37,19 +37,12 @@ const Dialogues = (props) => {
     return (
         <div className={Styles.dialogues}>
             {dialoguesElements}
-            <div className={Styles.sendMessage}>
-                <textarea
-                    onChange={onInputMessageText}
-                    onKeyDown={onHotKeyDown}
-                    value={props.inputText}
-                    ref={newMessageElement}
-                    placeholder="Send message (Enter)">
-                </textarea>
-                <Button
-                    btnText="Send"
-                    btnOnClick={onSendMessage}
-                ></Button>
-            </div>
+            <ReduxSendMessageForm
+                newMessageElement={newMessageElement}
+                onHotKeyDown={onHotKeyDown}
+                onInputMessageText={onInputMessageText}
+                onSendMessage={onSendMessage}
+            ></ReduxSendMessageForm>
         </div>
     );
 };
