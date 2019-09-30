@@ -1,5 +1,4 @@
 const SEND_MESSAGE = 'SEND-MESSAGE';
-const UPDATE_INPUT_MESSAGE_TEXT = 'UPDATE-INPUT-MESSAGE-TEXT';
 
 let initialState = {
     membersData: [
@@ -9,26 +8,18 @@ let initialState = {
     ],
     dialoguesData: [
         {id: 1, dialogMessage: "Yo"},
-        {id: 2, dialogMessage: "Wuzup"},
+        {id: 2, dialogMessage: "It's amazing"},
         {id: 3, dialogMessage: "Homie"}
-    ],
-    inputMessageText: ''
+    ]
 }
 
 export const messagesReducer = (state = initialState, action) => {
     switch (action.type){
         case SEND_MESSAGE:
-            let newDialog = state.inputMessageText;
+            let newDialog = action.newMessage;
             return {
                 ...state,
-                inputMessageText: '',
                 dialoguesData: [...state.dialoguesData, {id: 4, dialogMessage: newDialog}]
-            }
-
-        case UPDATE_INPUT_MESSAGE_TEXT:
-            return {
-                ...state,
-                inputMessageText: action.newInputMessageText
             }
 
         default:
@@ -36,15 +27,9 @@ export const messagesReducer = (state = initialState, action) => {
     }
 };
 
-export const sendMessageActionCreator = () => {
+export const sendMessageActionCreator = (newMessage) => {
     return {
-        type: SEND_MESSAGE
-    }
-};
-
-export const onInputMessageTextActionCreator = (newMessageText) => {
-    return {
-        type: UPDATE_INPUT_MESSAGE_TEXT,
-        newInputMessageText: newMessageText
+        type: SEND_MESSAGE,
+        newMessage
     }
 };

@@ -13,35 +13,24 @@ const Dialogues = (props) => {
         );
     });
 
-    let newMessageElement = React.createRef();
-
     const onHotKeyDown = (e) => {
         if(e.key === 'Enter') {
             e.preventDefault();
-            onSendMessage ();
+            addNewMessage();
         }
     };
 
-    const onInputMessageText = () => {
-        let newMessageText = newMessageElement.current.value;
-        props.inputMessageText(newMessageText)
-    };
+    const addNewMessage = (values) => {
+        props.sendMessage(values.newMessage);
 
-    const onSendMessage = () => {
-        let newMessageText = newMessageElement.current.value;
-        if (newMessageText){
-            props.sendMessage();
-        }
     };
 
     return (
         <div className={Styles.dialogues}>
             {dialoguesElements}
             <ReduxSendMessageForm
-                newMessageElement={newMessageElement}
+                onSubmit={addNewMessage}
                 onHotKeyDown={onHotKeyDown}
-                onInputMessageText={onInputMessageText}
-                onSendMessage={onSendMessage}
             ></ReduxSendMessageForm>
         </div>
     );

@@ -5,24 +5,25 @@ import Styles from './SendMessageForm.module.sass'
 
 const SendMessageForm = (props) => {
     return(
-        <form className={Styles.sendMessage}>
-            <textarea
-                onChange={props.onInputMessageText}
+        <form className={Styles.sendMessage} onSubmit={props.handleSubmit}>
+            <Field
+                component={'textarea'}
+                name={'newMessage'}
                 onKeyDown={props.onHotKeyDown}
+                /*onChange={props.onInputMessageText}
                 value={props.inputText}
-                ref={props.newMessageElement}
+                ref={props.newMessageElement}*/
                 placeholder="Send message (Enter)">
-            </textarea>
+            </Field>
             <Button
                 btnText="Send"
-                btnOnClick={props.onSendMessage}
             ></Button>
         </form>
     );
 };
 
 const ReduxSendMessageForm = reduxForm({
-    form: 'SenMessage'
+    form: 'sendMessage'
 })(SendMessageForm);
 
 export default ReduxSendMessageForm;
