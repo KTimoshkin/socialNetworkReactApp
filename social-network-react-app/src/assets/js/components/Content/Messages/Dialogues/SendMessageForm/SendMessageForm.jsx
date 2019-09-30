@@ -2,19 +2,23 @@ import React from 'react'
 import Button from "../../../../global/Button/Button";
 import {Field, reduxForm} from "redux-form";
 import Styles from './SendMessageForm.module.sass'
+import {maxLenghtCreator, requiredField} from "../../../../../utils/validators";
+import {Textarea} from "../../../../global/FormsControls/FormControls";
+
+let maxLenght100 = maxLenghtCreator(100);
 
 const SendMessageForm = (props) => {
+
+
     return(
         <form className={Styles.sendMessage} onSubmit={props.handleSubmit}>
             <Field
-                component={'textarea'}
+                component={Textarea}
                 name={'newMessage'}
                 onKeyDown={props.onHotKeyDown}
-                /*onChange={props.onInputMessageText}
-                value={props.inputText}
-                ref={props.newMessageElement}*/
-                placeholder="Send message (Enter)">
-            </Field>
+                placeholder="Send message (Enter)"
+                validate={[requiredField, maxLenght100]}
+            ></Field>
             <Button
                 btnText="Send"
             ></Button>
