@@ -1,7 +1,8 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink, Redirect} from 'react-router-dom';
 import Styles from './Header.module.sass'
 import img from '../../../img/site-logo.png';
+import Button from "../global/Button/Button";
 
 const Header = (props)=> {
     return(
@@ -15,8 +16,8 @@ const Header = (props)=> {
                 </div>
                 <div className={Styles.loginBlock}>
                     {props.isAuth
-                        ? <p>{props.login}</p>
-                        : <NavLink to="/login">Login</NavLink>}
+                        ? <p>{props.login} <Button btnText={"Logout"} btnOnClick={props.logout}></Button></p>
+                        : <NavLink to="/login">Login </NavLink>}
                 </div>
             </div>
         </header>

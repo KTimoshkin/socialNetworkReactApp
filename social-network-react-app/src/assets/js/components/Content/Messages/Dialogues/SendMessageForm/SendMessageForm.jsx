@@ -8,14 +8,11 @@ import {Textarea} from "../../../../global/FormsControls/FormControls";
 let maxLenght100 = maxLenghtCreator(100);
 
 const SendMessageForm = (props) => {
-
-
     return(
         <form className={Styles.sendMessage} onSubmit={props.handleSubmit}>
             <Field
                 component={Textarea}
                 name={'newMessage'}
-                onKeyDown={props.onHotKeyDown}
                 placeholder="Send message (Enter)"
                 validate={[requiredField, maxLenght100]}
             ></Field>

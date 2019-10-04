@@ -13,7 +13,7 @@ const LoginForm = (props) => {
         <form onSubmit={props.handleSubmit} className={Styles.loginform}>
             <ul>
                 <li><Field component={Input} validate={[requiredField, maxLenght30]} name={"login"} type={"text"} placeholder="Login"/></li>
-                <li><Field component={Input} validate={[requiredField, maxLenght10]} name={"password"} type={"text"} placeholder="Password"/></li>
+                <li><Field component={Input} validate={[requiredField, maxLenght10]} name={"password"} type={"password"} placeholder="Password"/></li>
                 <li><Field component={Input} name={"rememberMe"} type={"checkbox"}/>remember me</li>
                 <li><Button btnText="Login"></Button></li>
             </ul>
