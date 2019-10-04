@@ -10,14 +10,18 @@ class ProfileContainer extends Component{
     componentDidMount() {
         let userId = this.props.match.params.userId;
         if (!userId) {
-            userId = 1662;
+            userId = this.props.authUserId;
         }
         this.props.getProfile(userId);
         this.props.getStatus(userId);
     }
     render() {
         return(
-            <Profile {...this.props} profile={this.props.profile} status={this.props.status} updateStatus={this.props.updateStatus}></Profile>
+            <Profile
+                {...this.props}
+                profile={this.props.profile}
+                status={this.props.status}
+                updateStatus={this.props.updateStatus}></Profile>
         );
     }
 }
@@ -25,7 +29,10 @@ class ProfileContainer extends Component{
 let mapStateToProps = (state) => {
     return {
         profile: state.ProfilePage.profile,
-        status: state.ProfilePage.status
+        status: state.ProfilePage.status,
+        authUserId: state.auth.userId,
+        isAuth: state.auth.isAuth
+
     }
 };
 
