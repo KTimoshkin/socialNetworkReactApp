@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {
     followThunkCreator, getFriendsThunkCreator,
@@ -9,34 +9,34 @@ import Preloader from "../../UI/Preloader/Preloader";
 import {AuthRedirect} from "../../../hoc/AuthRedirect";
 import {compose} from "redux";
 
-class FriendsContainer extends React.Component{
-    componentDidMount() {
-        this.props.getFriends(this.props.currentPage, this.props.pageSize);
-    }
+const FriendsContainer = (props) => {
+    useEffect(() => {
+        props.getFriends(props.currentPage, props.pageSize);
+    }, []);
 
-    onPageChange = (page) => {
-        this.props.setCurrentPage(page);
-        this.props.getFriends(page, this.props.pageSize);
-    }
+    const onPageChange = (page) => {
+        props.setCurrentPage(page);
+        props.getFriends(page, this.props.pageSize);
+    };
 
-    render() {
-        return(
-            <>
-                {this.props.isFetching ? <Preloader />: null}
-                <Friends
-                    totalFriendsCount={this.props.totalFriendsCount}
-                    pageSize={this.props.pageSize}
-                    friends={this.props.friends}
-                    currentPage={this.props.currentPage}
 
-                    follow={this.props.follow}
-                    unfollow={this.props.unfollow}
-                    onPageChange={this.onPageChange}
-                ></Friends>
-            </>
-        );
-    }
-}
+    return (
+        <>
+            {props.isFetching ? <Preloader/> : null}
+            <Friends
+                totalFriendsCount={props.totalFriendsCount}
+                pageSize={props.pageSize}
+                friends={props.friends}
+                currentPage={props.currentPage}
+
+                follow={props.follow}
+                unfollow={props.unfollow}
+                onPageChange={onPageChange}
+            />
+        </>
+    );
+
+};
 
 let mapStateToProps = (state) => {
     return {

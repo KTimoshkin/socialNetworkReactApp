@@ -23,13 +23,13 @@ const Friend = (props) => {
                         btnOnClick={() => {
                             props.unfollow(props.id);}
                         }
-                    ></Button>
+                    />
                     : <Button
                         btnText="Follow"
                         btnOnClick={() => {
                             props.follow(props.id);}
                     }
-                    ></Button>
+                    />
                 }
             </div>
         </div>

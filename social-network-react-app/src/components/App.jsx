@@ -7,10 +7,10 @@ import Content from './Content/Content';
 const App = () => {
   return (
       <div className="app">
-          <HeaderContainer></HeaderContainer>
+          <HeaderContainer />
             <div className="appWrapper">
-                <Sidebar></Sidebar>
-                <Content></Content>
+                <Sidebar />
+                <Content />
             </div>
       </div>
   );

@@ -15,10 +15,10 @@ const SendMessageForm = (props) => {
                 name={'newMessage'}
                 placeholder="Send message (Enter)"
                 validate={[requiredField, maxLenght100]}
-            ></Field>
+            />
             <Button
                 btnText="Send"
-            ></Button>
+            />
         </form>
     );
 };

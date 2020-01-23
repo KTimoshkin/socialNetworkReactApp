@@ -13,26 +13,26 @@ const Content = () => {
                 path="/login"
                 render={
                     () =>
-                        <Login></Login>
-                }></Route>
+                        <Login />
+                } />
             <Route
                 path="/profile/:userId?"
                 render={
                     () =>
-                        <ProfileContainer></ProfileContainer>
-                }></Route>
+                        <ProfileContainer />
+                } />
             <Route
                 path="/messages"
                 render={
                     () =>
-                        <Messages></Messages>
-                }></Route>
+                        <Messages />
+                } />
             <Route
                 path="/friends"
                 render={
                     () =>
-                        <FriendsContainer></FriendsContainer>
-                }></Route>
+                        <FriendsContainer />
+                } />
         </div>
     );
 }
