@@ -1,9 +1,5 @@
 import {profileAPI} from "../api/api";
-
-const ADD_POST = 'ADD-POST';
-const UPDATE_INPUT_POST_TEXT = 'UPDATE-INPUT-POST-TEXT';
-const SET_PROFILE = 'SET-USER-PROFILE';
-const SET_STATUS = 'SET-STATUS';
+import {reduxTypes} from '../constants';
 
 let initialState = {
     postsData: [
@@ -17,7 +13,7 @@ let initialState = {
 
 export const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_POST:
+        case reduxTypes.ADD_POST:
             let newPost = state.inputPostText;
             return {
                 ...state,
@@ -25,19 +21,19 @@ export const profileReducer = (state = initialState, action) => {
                 postsData: [...state.postsData, {id: 5, postText: newPost}]
             };
 
-        case UPDATE_INPUT_POST_TEXT:
+        case reduxTypes.UPDATE_INPUT_POST_TEXT:
             return {
                 ...state,
                 inputPostText: action.newInputPostText
             };
 
-        case SET_PROFILE:
+        case reduxTypes.SET_PROFILE:
             return{
                 ...state,
                 profile: action.profileId
             };
 
-        case SET_STATUS:
+        case reduxTypes.SET_STATUS:
             return{
                 ...state,
                 status: action.status
@@ -51,27 +47,27 @@ export const profileReducer = (state = initialState, action) => {
 
 export const addPostActionCreator = () => {
     return {
-        type: ADD_POST
+        type: reduxTypes.ADD_POST
     }
 };
 
 export const onInputPostTextActionCreator = (newPostText) => {
     return {
-        type: UPDATE_INPUT_POST_TEXT,
+        type: reduxTypes.UPDATE_INPUT_POST_TEXT,
         newInputPostText: newPostText
     }
 };
 
 export const setProfileActionCreater = (profileId) => {
     return {
-        type: SET_PROFILE,
+        type: reduxTypes.SET_PROFILE,
         profileId: profileId
     }
 };
 
 export const setStatusActionCreater = (status) => {
     return {
-        type: SET_STATUS,
+        type: reduxTypes.SET_STATUS,
         status: status
     }
 };

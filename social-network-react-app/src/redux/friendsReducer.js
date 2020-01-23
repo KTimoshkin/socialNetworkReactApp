@@ -1,11 +1,5 @@
 import {friendsAPI} from "../api/api";
-
-const FOLLOW = 'FOLLOW';
-const UNFOLLOW = 'UNFOLLOW';
-const SET_FRIENDS = 'SET-USERS';
-const SET_CURRENT_PAGE = 'SET-CURRENT-PAGE';
-const SET_TOTAL_FRIENDS_COUNT = 'SET-TOTAL-FRIENDS-COUNT';
-const SET_IS_FETCHING = 'SET-IS-FETCHING';
+import {reduxTypes} from '../constants';
 
 let initialState = {
     friends: [],
@@ -17,13 +11,13 @@ let initialState = {
 
 export const friendsReducer = (state = initialState, action) => {
     switch (action.type){
-        case SET_FRIENDS:
+        case reduxTypes.SET_FRIENDS:
             return {
                 ...state,
                 friends: [...action.users]
             };
 
-        case FOLLOW:
+        case reduxTypes.FOLLOW:
             return {
                 ...state,
                 friends: state.friends.map(f =>  {
@@ -34,7 +28,7 @@ export const friendsReducer = (state = initialState, action) => {
                 })
             };
 
-        case UNFOLLOW:
+        case reduxTypes.UNFOLLOW:
             return {
                 ...state,
                 friends: state.friends.map(f =>  {
@@ -45,19 +39,19 @@ export const friendsReducer = (state = initialState, action) => {
                 })
             };
 
-        case SET_CURRENT_PAGE:
+        case reduxTypes.SET_CURRENT_PAGE:
             return {
                 ...state,
                 currentPage: action.currentPage
             };
 
-        case SET_TOTAL_FRIENDS_COUNT:
+        case reduxTypes.SET_TOTAL_FRIENDS_COUNT:
             return {
                 ...state,
                 totalFriendsCount: action.totalFriendsCount
             };
 
-        case SET_IS_FETCHING:
+        case reduxTypes.SET_IS_FETCHING:
             return {
                 ...state,
                 isFetching: action.isFetching
@@ -71,42 +65,42 @@ export const friendsReducer = (state = initialState, action) => {
 
 export const setFriendsActionCreater = (users) => {
     return{
-        type: SET_FRIENDS,
+        type: reduxTypes.SET_FRIENDS,
         users: users
     }
 };
 
 export const followActionCreater = (userId) => {
     return{
-        type: FOLLOW,
+        type: reduxTypes.FOLLOW,
         friendId: userId
     }
 };
 
 export const unfollowActionCreater = (userId) => {
     return{
-        type: UNFOLLOW,
+        type: reduxTypes.UNFOLLOW,
         friendId: userId
     }
 };
 
 export const setCurrentPageActionCreater = (pageNumber) => {
     return{
-        type: SET_CURRENT_PAGE,
+        type: reduxTypes.SET_CURRENT_PAGE,
         currentPage: pageNumber
     }
 };
 
 export const setFriendsCountActionCreater = (totalCount) => {
     return{
-        type: SET_TOTAL_FRIENDS_COUNT,
+        type: reduxTypes.SET_TOTAL_FRIENDS_COUNT,
         totalFriendsCount: totalCount
     }
 };
 
 export const setIsFetchingActionCreater = (isFetch) => {
     return{
-        type: SET_IS_FETCHING,
+        type: reduxTypes.SET_IS_FETCHING,
         isFetching: isFetch
     }
 };

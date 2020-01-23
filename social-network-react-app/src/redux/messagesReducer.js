@@ -1,4 +1,4 @@
-const SEND_MESSAGE = 'SEND-MESSAGE';
+import {reduxTypes} from '../constants';
 
 let initialState = {
     membersData: [
@@ -15,7 +15,7 @@ let initialState = {
 
 export const messagesReducer = (state = initialState, action) => {
     switch (action.type){
-        case SEND_MESSAGE:
+        case reduxTypes.SEND_MESSAGE:
             let newDialog = action.newMessage;
             return {
                 ...state,
@@ -29,7 +29,7 @@ export const messagesReducer = (state = initialState, action) => {
 
 export const sendMessageActionCreator = (newMessage) => {
     return {
-        type: SEND_MESSAGE,
+        type: reduxTypes.SEND_MESSAGE,
         newMessage
     }
 };
